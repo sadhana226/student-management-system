@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "b2f1e4a3-8910-4c12-98ab-347890123456",
+		"name": "Student Management System API",
+		"description": "Postman API Collection for testing Spring Boot REST API endpoints in the Student Management System.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Create Student (POST)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Alice Smith\",\n  \"email\": \"alice.smith@university.edu\",\n  \"phone\": \"+1-555-019-2834\",\n  \"department\": \"Computer Science & Engineering\",\n  \"year\": 3,\n  \"dateOfBirth\": \"2003-05-15\",\n  \"address\": \"101 Campus Drive, Block B, Room 204\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Get All Students (GET)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Get Single Student by ID (GET)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/students/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"students",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Update Student (PUT)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Alice Smith Johnston\",\n  \"email\": \"alice.smith@university.edu\",\n  \"phone\": \"+1-555-999-8888\",\n  \"department\": \"Data Science & AI\",\n  \"year\": 4,\n  \"dateOfBirth\": \"2003-05-15\",\n  \"address\": \"305 Innovation Tech Park, Suite 12\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/students/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"students",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Search Students (GET)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/students/search?keyword=Computer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"students",
+						"search"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "Computer"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. Delete Student (DELETE)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/students/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"students",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

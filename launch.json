@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot - Student Management Application",
+      "request": "launch",
+      "mainClass": "com.student.management.StudentManagementApplication",
+      "projectName": "student-management",
+      "cwd": "${workspaceFolder}/backend"
+    }
+  ]
+}

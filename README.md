@@ -155,13 +155,3 @@ mvn spring-boot:run
 
 ---
 
-## 🎓 Viva Presentation Tips
-
-1. **Architecture Explanation**:
-   - Highlight the **MVC / Controller-Service-Repository** pattern.
-   - **Controller** handles HTTP endpoints & DTO validation.
-   - **Service** encapsulates business logic (e.g. duplicate email prevention).
-   - **Repository** handles DB interaction using Spring Data JPA.
-   - **React Frontend** consumes REST APIs asynchronously using Axios.
-2. **Database Auto DDL**: Explain `spring.jpa.hibernate.ddl-auto=update`, which automatically generates table schemas from `@Entity` annotations in `Student.java`.
-3. **Exception Handling**: Demonstrate how `@ControllerAdvice` maps custom exceptions (`StudentNotFoundException`, `EmailAlreadyExistsException`, `@Valid` errors) to clean HTTP status codes (400, 404, 409).
